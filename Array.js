@@ -99,9 +99,10 @@ function main(){
     let arr = new Array();
 
     // Add an item to the array
-    arr.push(3);
+    arr.push(15);
 
     console.log(arr);
+
 }
 
 main();
