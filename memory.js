@@ -42,6 +42,37 @@ class Memory {
     set(ptr, value) {
       this.memory[ptr] = value;
     }
-  }
+
+};
+
+class myArray {
+    constructor(){
+        this.length = 0;
+        this.ptr = memory.allocate(this.length);
+    }
+    
+    _resize(size){
+        const oldPtr = this.ptr;
+        this.ptr = memory.allocate(size);
+        if(this.ptr === null){
+            throw new Error('out of memory');
+        }
+        memory.copy(this.ptr, oldPtr, this.length);
+        memory.free(oldPtr);
+    }
+
+    _main(){
+
+        Array.SIZE_RATIO = 3;
+    
+        // Create an instance of the Array class
+        let arr = new Array();
+    
+        // Add an item to the array
+        arr.push(3);
+    
+        console.log(arr);
+    }
+}
   
   module.exports = Memory;
