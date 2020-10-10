@@ -1,4 +1,7 @@
-import {memory} from './memory';
+const Memory = require('./memory');
+console.log(Memory);
+
+const memory = new Memory();
 
 class Array {
     // initial array and assigns size currently empty 
@@ -86,21 +89,20 @@ class myArray {
         memory.free(oldPtr);
     }
 
-    main(){
-
-        Array.SIZE_RATIO = 3;
-    
-        // Create an instance of the Array class
-        let arr = new Array();
-    
-        // Add an item to the array
-        arr.push(3);
-    
-        console.log(arr);
-    }
-    main()
-
 }
 
-Array.SIZE_RATIO = 3;
+function main(){
+
+    Array.SIZE_RATIO = 3;
+
+    // Create an instance of the Array class
+    let arr = new Array();
+
+    // Add an item to the array
+    arr.push(3);
+
+    console.log(arr);
+}
+
+main();
 
