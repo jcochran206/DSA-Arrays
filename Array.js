@@ -93,17 +93,26 @@ class myArray {
 
 function main(){
 
-    Array.SIZE_RATIO = 3;
+    Array.SIZE_RATIO = 5;
 
     // Create an instance of the Array class
     let arr = new Array();
 
-    // Add an item to the array
+    // Add an item to the arra5
+    arr.push(3);
+    arr.push(5);
     arr.push(15);
+    arr.push(19);
+    arr.push(45);
+    arr.push(10);
 
     console.log(arr);
-
 }
 
 main();
+
+// question explore push 
+// Ans: 1 len 3 cap 0 ptr
+// when pushing different numbers 
+// Ans portional to the capacity of items pushed so pointer is 3 in this example length is 4 for items and cap is 12
 
